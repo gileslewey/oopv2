@@ -2,8 +2,11 @@
  * Project 4 - OOP Game App
  * app.js */
 
-
-
+const game = new Game;
+const startButton = document.getElementById('btn__reset');
+startButton.addEventListener('click', function(){
+game.startGame();
+});
 
 class App {
 constructor(){
@@ -13,7 +16,8 @@ constructor(){
 // new Game();
 // console.log('game started');
 // };
-fooeventdelegationButton.addEventListener('click', handleInteraction());
+
+
 
 
 
@@ -48,9 +52,9 @@ fooeventdelegationButton.addEventListener('click', handleInteraction());
 // textSpot.textContent = '';
 // textSpot.insertAdjacentHTML("afterbegin", noCommas);
 
-const game = new Game();
-game.startGame();
-console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
+// const game = new Game();
+// game.startGame();
+// console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
  // const myArray = text.split(" ");
  // let word = myArray[1];
  // console.log(word);
