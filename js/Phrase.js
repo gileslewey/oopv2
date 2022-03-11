@@ -5,7 +5,7 @@
  class Phrase{
 
 constructor(phrase){
-  console.log('hi there');
+  console.log('hi there ');
   this.phrase = phrase.toLowerCase();
 }
 
