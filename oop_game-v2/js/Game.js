@@ -126,7 +126,7 @@
     const overlay = document.getElementById('overlay');
     overlay.style.display = 'none';
     keyRows.style.display = 'block';
-    this.activePhrase = game.getRandomPhrase();
+    this.activePhrase = this.getRandomPhrase();
     this.activePhrase.addPhraseToDisplay();
   };
 
@@ -135,7 +135,7 @@
   resetGame(){
       this.activePhrase = null;
       this.missed = 0;
-      textSpot.innerHTML = ''
+      textSpot.innerHTML = '';
       for (let i = 0; i < buttons.length; i++){
               buttons[i].className = 'key';
               buttons[i].disabled = false;
