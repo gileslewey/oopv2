@@ -2,10 +2,9 @@
  * Project 4 - OOP Game App
  * Phrase.js */
 
- class Phrase{
+class Phrase{
 
 constructor(phrase){
-  console.log('phrase constructor');
   this.phrase = phrase.toLowerCase();
 }
 
@@ -28,7 +27,6 @@ addPhraseToDisplay(){
 * @param (string) letter - Letter to check
 */
 checkLetter(letter){
-console.log('check letter');
 const currentPhrase = game.activePhrase.phrase;
 	const letterMatch = currentPhrase.match(letter);
 	if (letterMatch === null) {
@@ -39,11 +37,17 @@ const currentPhrase = game.activePhrase.phrase;
   }
 }
 
+//make selected key 
 showMatchedLetter(letter){
 let showLetter = document.getElementById('phrase').firstElementChild.children
 for (let i=0; i<showLetter.length; i++){
   if (letter === showLetter[i].innerHTML) {
     showLetter[i].className = `show letter ${letter}`;
+    const show = document.querySelectorAll(".show");
+    show.forEach(element => {
+      element.style.backgroundColor = showColor;
+      element.style.color = 'white';
+      });
     }
   }
 }
